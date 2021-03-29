@@ -31,7 +31,7 @@ premierLeagueButton.addEventListener('click', function() {
     .then(response => response.json())
     .then(response => {
         const team = response.teams;
-        console.log(team)
+        
         let teamDetail = '';
         team.forEach(m => teamDetail += showTeam(m));
         const teamContainer = document.querySelector('.list-club-container');
@@ -55,7 +55,7 @@ bundesligaButton.addEventListener('click', function() {
     .then(response => response.json())
     .then(response => {
         const team = response.teams;
-        console.log(team)
+        
         let teamDetail = '';
         team.forEach(m => teamDetail += showTeam(m));
         const teamContainer = document.querySelector('.list-club-container');
@@ -79,7 +79,7 @@ laligaButton.addEventListener('click', function() {
     .then(response => response.json())
     .then(response => {
         const team = response.teams;
-        console.log(team)
+        
         let teamDetail = '';
         team.forEach(m => teamDetail += showTeam(m));
         const teamContainer = document.querySelector('.list-club-container');
@@ -103,7 +103,7 @@ ligue1Button.addEventListener('click', function() {
     .then(response => response.json())
     .then(response => {
         const team = response.teams;
-        console.log(team)
+        
         let teamDetail = '';
         team.forEach(m => teamDetail += showTeam(m));
         const teamContainer = document.querySelector('.list-club-container');
@@ -127,7 +127,7 @@ seriaAButton.addEventListener('click', function() {
     .then(response => response.json())
     .then(response => {
         const team = response.teams;
-        console.log(team)
+       
         let teamDetail = '';
         team.forEach(m => teamDetail += showTeam(m));
         const teamContainer = document.querySelector('.list-club-container');
@@ -184,7 +184,7 @@ function clickLogo() {
     modalDetailButton.forEach(btn => {
         btn.addEventListener('click', function() {
             const id = this.dataset.id;
-            console.log(id)
+            
             fetch('https://api.football-data.org/v2/teams/' + id, {
                 headers: {
                     'X-Auth-Token': api_key
