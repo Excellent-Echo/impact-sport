@@ -1,6 +1,6 @@
 //button-side-matches
 const getButtonMatches = document.querySelectorAll('.matches')
-console.log(getButtonMatches);
+//console.log(getButtonMatches);
 getButtonMatches.forEach(button => {
     button.addEventListener('click', function () {
         getButtonMatches.forEach(btn => {
