@@ -272,7 +272,9 @@
 body {
   background-image: url("https://free4kwallpapers.com/uploads/originals/2020/02/27/beautiful-stadium-photo-wallpaper.jpg");
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 .matches-list-container {
