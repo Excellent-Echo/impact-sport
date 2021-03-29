@@ -5,6 +5,65 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 480px) {
+  .header-container .header .logo h3 a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper .content .content-satu-wrapper .bigger-text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper .content .content-satu-wrapper .bigger-text h1 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container .header .logo h3 a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container .header .list-menu li a {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-container {
+    margin-top: -15px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-wrapper {
+    margin-bottom: -20px;
+    height: 10px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .footer-wrapper .footer {
+    font-size: 10px;
+  }
+}
+
+
 /* tambah background */
 body {
   position: relative;
