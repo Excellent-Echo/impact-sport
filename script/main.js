@@ -38,7 +38,7 @@ function getMatches(league) {
             const matches = res.matches
             let card = '';
             matches.map(match => {
-                console.log(match);
+                //console.log(match);
                 card += showMatches(match)
             })
             const matchesList = document.querySelector('.matches-list-container')
