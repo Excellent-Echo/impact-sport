@@ -1,6 +1,6 @@
 //button-side-matches
 const getButtonMatches = document.querySelectorAll('.matches')
-console.log(getButtonMatches);
+//console.log(getButtonMatches);
 getButtonMatches.forEach(button => {
     button.addEventListener('click', function () {
         getButtonMatches.forEach(btn => {
@@ -38,7 +38,7 @@ function getMatches(league) {
             const matches = res.matches
             let card = '';
             matches.map(match => {
-                console.log(match);
+                //console.log(match);
                 card += showMatches(match)
             })
             const matchesList = document.querySelector('.matches-list-container')
