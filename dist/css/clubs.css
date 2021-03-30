@@ -8,10 +8,24 @@
 body {
   position: relative;
   margin: 0;
-  /* background-image: url('/assets/img/fionn-grosse-G5uasfXjZdc-unsplash.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%; */
+}
+
+@media (max-width: 768px) {
+  .header-container .header .logo h3 a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-wrapper .content .side-menu-container .sidemenu {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-wrapper .footer {
+    font-size: 10px;
+  }
 }
 
 .header-container {
@@ -193,6 +207,11 @@ body {
 .container-fluid .row {
   display: flex;
   align-items: center;
+}
+
+.list-group-item strong span{
+  display: inline-block;
+  min-width: 200px;
 }
 
 /*# sourceMappingURL=clubs.css.map */

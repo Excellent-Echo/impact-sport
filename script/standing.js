@@ -165,6 +165,19 @@ function changeButtonFormatSeriaA() {
 function showRank(m) {
     let form = m.form;
     let newForm = form.replace(/[^\w\s]/gi, '');
+    let newForm1 = '';
+    for (char of newForm) {
+        if (char.match(/[W]/gi)) {
+            char = char.fontcolor('green');
+            newForm1 += char;
+        } else if (char.match(/[L]/gi)) {
+            char = char.fontcolor('red');
+            newForm1 += char;
+        } else {
+            char = char.fontcolor('#333');
+            newForm1 += char;
+        }
+    }
     return `<tr>
     <th class="text-center">${m.position}</th>
     <td><img src="${m.team.crestUrl}" class="logo-in-cell"></td>
@@ -174,6 +187,6 @@ function showRank(m) {
     <td>${m.draw}</td>
     <td>${m.lost}</td>
     <td>${m.goalDifference}</td>
-    <td>${newForm}</td>
+    <td>${newForm1}</td>
     </tr>`;
 };

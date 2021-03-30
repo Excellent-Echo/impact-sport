@@ -31,7 +31,6 @@ premierLeagueButton.addEventListener('click', function() {
     .then(response => response.json())
     .then(response => {
         const team = response.teams;
-        console.log(team)
         let teamDetail = '';
         team.forEach(m => teamDetail += showTeam(m));
         const teamContainer = document.querySelector('.list-club-container');
@@ -55,7 +54,6 @@ bundesligaButton.addEventListener('click', function() {
     .then(response => response.json())
     .then(response => {
         const team = response.teams;
-        console.log(team)
         let teamDetail = '';
         team.forEach(m => teamDetail += showTeam(m));
         const teamContainer = document.querySelector('.list-club-container');
@@ -79,7 +77,6 @@ laligaButton.addEventListener('click', function() {
     .then(response => response.json())
     .then(response => {
         const team = response.teams;
-        console.log(team)
         let teamDetail = '';
         team.forEach(m => teamDetail += showTeam(m));
         const teamContainer = document.querySelector('.list-club-container');
@@ -103,7 +100,6 @@ ligue1Button.addEventListener('click', function() {
     .then(response => response.json())
     .then(response => {
         const team = response.teams;
-        console.log(team)
         let teamDetail = '';
         team.forEach(m => teamDetail += showTeam(m));
         const teamContainer = document.querySelector('.list-club-container');
@@ -127,7 +123,6 @@ seriaAButton.addEventListener('click', function() {
     .then(response => response.json())
     .then(response => {
         const team = response.teams;
-        console.log(team)
         let teamDetail = '';
         team.forEach(m => teamDetail += showTeam(m));
         const teamContainer = document.querySelector('.list-club-container');
@@ -184,7 +179,6 @@ function clickLogo() {
     modalDetailButton.forEach(btn => {
         btn.addEventListener('click', function() {
             const id = this.dataset.id;
-            console.log(id)
             fetch('https://api.football-data.org/v2/teams/' + id, {
                 headers: {
                     'X-Auth-Token': api_key
@@ -193,7 +187,6 @@ function clickLogo() {
             .then(response => response.json())
             .then(m => {
                 const clubDetail = showClubDetail(m);
-                console.log(clubDetail)
                 const modalBody = document.querySelector('.modal-body');
                 modalBody.innerHTML = clubDetail;
             });
@@ -217,11 +210,11 @@ function showClubDetail(m) {
                     <div class="col-md">
                         <ul class="list-group">
                             <li class="list-group-item"><h4>${m.name}</h4></li>
-                            <li class="list-group-item"><strong>Short Name : </strong>${m.shortName}</li>
-                            <li class="list-group-item"><strong>Address : </strong>${m.address}</li>
-                            <li class="list-group-item"><strong>Founded : </strong>${m.founded}</li>
-                            <li class="list-group-item"><strong>Venue : </strong>${m.venue}</li>
-                            <li class="list-group-item"><strong>Website : </strong><a href="${m.website}">${m.website}</a></li>
+                            <li class="list-group-item"><strong><span>Short Name</span>:</strong> ${m.shortName}</li>
+                            <li class="list-group-item"><strong><span>Address</span>:</strong> ${m.address}</li>
+                            <li class="list-group-item"><strong><span>Founded</span>:</strong> ${m.founded}</li>
+                            <li class="list-group-item"><strong><span>Venue</span>:</strong> ${m.venue}</li>
+                            <li class="list-group-item"><strong><span>Website</span>:</strong><a href="${m.website}"> ${m.website}</a></li>
                         </ul>
                     </div>
                 </div>
