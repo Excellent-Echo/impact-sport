@@ -38,16 +38,25 @@
     <div class="content-wrapper">
         <div class="content">
             <!-- Sidemenu -->
-            <div class="side-menu-container">
-                <div class="sidemenu">
-                    <button id="premier-league" onclick="changeFormatButtonPremierLeague()" class="side-button aktif premier-league-button">Premier League</button>
-                    <button id="bundesliga" onclick="changeFormatButtonBundesliga()" class="side-button bundesliga-button">Bundesliga</button>
-                    <button id="laliga" onclick="changeFormatButtonLaliga()" class="side-button laliga-button">La Liga Santander</button>
-                    <button id="ligue1" onclick="changeFormatButtonLigue1()"class="side-button ligue1-button">Ligue 1</button>
-                    <button id="serie-a" onclick="changeFormatButtonSeriaA()" class="side-button ligaitaly-button">Serie A</button>
+            <!-- <div class="side-menu-container">
+                <div class="sidemenu" id="myDropdown">
+                    <a id="premier-league" onclick="changeFormatButtonPremierLeague()" class="side-button aktif premier-league-button">Premier League</a>
+                    <a id="bundesliga" onclick="changeFormatButtonBundesliga()" class="side-button bundesliga-button">Bundesliga</a>
+                    <a id="laliga" onclick="changeFormatButtonLaliga()" class="side-button laliga-button">La Liga Santander</a>
+                    <a id="ligue1" onclick="changeFormatButtonLigue1()"class="side-button ligue1-button">Ligue 1</a>
+                    <a id="serie-a" onclick="changeFormatButtonSeriaA()" class="side-button ligaitaly-button">Serie A</a>
                 </div>
+            </div> -->
 
-
+            <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">Nama Liga</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a id="premier-league" onclick="changeFormatButtonPremierLeague()" class="side-button aktif premier-league-button">Premier League</a>
+                    <a id="bundesliga" onclick="changeFormatButtonBundesliga()" class="side-button bundesliga-button">Bundesliga</a>
+                    <a id="laliga" onclick="changeFormatButtonLaliga()" class="side-button laliga-button">La Liga Santander</a>
+                    <a id="ligue1" onclick="changeFormatButtonLigue1()"class="side-button ligue1-button">Ligue 1</a>
+                    <a id="serie-a" onclick="changeFormatButtonSeriaA()" class="side-button ligaitaly-button">Serie A</a>
+              </div>
             </div>
 
 
@@ -86,6 +95,25 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
 </body>
 
 </html>
