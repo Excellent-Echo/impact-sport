@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Quando&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -125,6 +126,7 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
 }
+
 .header-container .header {
   width: 80%;
   display: flex;
@@ -133,26 +135,32 @@ body {
   height: 80px;
   align-items: center;
 }
+
 .header-container .header .logo {
   font-size: 1.5em;
 }
+
 .header-container .header .logo h3 a {
   text-decoration: none;
   color: white;
 }
+
 .header-container .header .list-menu {
   width: 50%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .header-container .header .list-menu li {
   list-style: none;
 }
+
 .header-container .header .list-menu li a {
   text-decoration: none;
   color: white;
 }
+
 .header-container .header .list-menu li a:hover {
   color: #cecccf;
 }
@@ -161,29 +169,35 @@ body {
   width: 100%;
   font-family: "Poppins", sans-serif;
 }
+
 .content-wrapper .content {
   width: 80%;
   margin: 0 auto;
 }
+
 .content-wrapper .content .content-satu-wrapper {
   display: flex;
   justify-content: space-between;
   height: 90vh;
   align-items: center;
 }
+
 .content-wrapper .content .content-satu-wrapper .bigger-text {
   width: 50%;
   font-size: 27px;
 }
+
 .content-wrapper .content .content-satu-wrapper .bigger-text h1 {
   margin: 1em 0;
 }
+
 .content-wrapper .content .content-satu-wrapper .imgbg {
   display: flex;
   justify-content: flex-end;
 }
+
 .content-wrapper .content .content-satu-wrapper .imgbg img {
-  width: 100%;
+  width: 80%;
 }
 
 /* tambah highlight buat h1 */
@@ -201,11 +215,27 @@ mark {
   color: white;
   font-family: "Poppins", sans-serif;
 }
+
 .footer-wrapper .footer {
   width: 80%;
   margin: 0 auto;
   text-align: center;
   padding: 1em;
+}
+
+@media screen and (max-width: 578px) {
+  .content-wrapper .content .content-satu-wrapper {
+    width: 100%;
+  }
+
+  .content-wrapper .content .content-satu-wrapper .bigger-text {
+    width: 100%;
+  }
+
+  .content-wrapper .content .content-satu-wrapper .imgbg {
+    position: relative;
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

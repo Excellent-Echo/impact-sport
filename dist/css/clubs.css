@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Quando&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Quando&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -117,6 +118,7 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
 }
+
 .header-container .header {
   width: 80%;
   display: flex;
@@ -125,25 +127,31 @@ body {
   height: 80px;
   align-items: center;
 }
+
 .header-container .header .logo {
   font-size: 1.5em;
 }
+
 .header-container .header .logo h3 a {
   text-decoration: none;
   color: white;
 }
+
 .header-container .header .list-menu {
   width: 50%;
   display: flex;
   justify-content: space-between;
 }
+
 .header-container .header .list-menu li {
   list-style: none;
 }
+
 .header-container .header .list-menu li a {
   text-decoration: none;
   color: white;
 }
+
 .header-container .header .list-menu li a:hover {
   color: #cecccf;
 }
@@ -152,27 +160,33 @@ body {
   width: 100%;
   font-family: "Poppins", sans-serif;
 }
+
 .content-wrapper .content {
   width: 80%;
   margin: 0 auto;
 }
+
 .content-wrapper .content .content-satu-wrapper {
   display: flex;
   justify-content: space-between;
   height: 90vh;
   align-items: center;
 }
+
 .content-wrapper .content .content-satu-wrapper .bigger-text {
   width: 50%;
   font-size: 27px;
 }
+
 .content-wrapper .content .content-satu-wrapper .bigger-text h1 {
   margin: 1em 0;
 }
+
 .content-wrapper .content .content-satu-wrapper .imgbg {
   display: flex;
   justify-content: flex-end;
 }
+
 .content-wrapper .content .content-satu-wrapper .imgbg img {
   width: 100%;
 }
@@ -185,6 +199,7 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
 }
+
 .footer-wrapper .footer {
   bottom: 0;
   width: 80%;
@@ -203,14 +218,17 @@ body {
 .content-wrapper {
   width: 100%;
 }
+
 .content-wrapper .content {
   display: flex;
   justify-content: space-between;
   width: 80%;
 }
+
 .content-wrapper .content .side-menu-container {
   width: 30%;
 }
+
 .content-wrapper .content .side-menu-container .sidemenu {
   width: 80%;
   display: flex;
@@ -218,6 +236,7 @@ body {
   height: 200px;
   justify-content: space-evenly;
 }
+
 .content-wrapper .content .side-menu-container .sidemenu .side-button {
   border: 1px solid #333;
   background-color: white;
@@ -227,6 +246,7 @@ body {
   cursor: pointer;
   font-weight: bold;
 }
+
 .content-wrapper .content .side-menu-container .sidemenu .side-button.aktif {
   background-color: #333;
   color: white;
@@ -243,7 +263,8 @@ body {
   cursor: pointer;
 }
 
-.dropbtn:hover, .dropbtn:focus {
+.dropbtn:hover,
+.dropbtn:focus {
   background-color: #2d2f30;
 }
 
@@ -258,7 +279,7 @@ body {
   background-color: #f1f1f1;
   min-width: 160px;
   overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -269,9 +290,13 @@ body {
   display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {
+  background-color: #ddd;
+}
 
-.show {display: block;}
+.show {
+  display: block;
+}
 
 /* dropdown */
 
@@ -279,12 +304,15 @@ body {
 .content-wrapper .content .table {
   width: 70%;
 }
+
 .content-wrapper .content .table tbody tr:hover {
   background-color: #e6dfdf;
 }
+
 .content-wrapper .content .table tbody tr td {
   text-align: center;
 }
+
 .content-wrapper .content .table tbody tr td .action-btn {
   border: 1px solid #333;
   background-color: #333;
@@ -302,6 +330,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 1em;
 }
+
 .content-wrapper .content .list-club-container .list-club {
   text-align: center;
   width: 100%;
@@ -315,12 +344,14 @@ body {
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
   cursor: pointer;
 }
+
 .content-wrapper .content .list-club-container .list-club img {
   text-align: center;
   max-width: 50%;
   margin: 10px;
   width: 80px;
 }
+
 .content-wrapper .content .list-club-container .list-club img p {
   text-align: center;
 }
@@ -338,9 +369,64 @@ body {
   align-items: center;
 }
 
-.list-group-item strong span{
+.list-group-item strong span {
   display: inline-block;
   min-width: 200px;
 }
+
+@media screen and (max-width: 768px) {
+
+  .content-wrapper .content {
+    flex-direction: column;
+  }
+
+  .dropdown {
+    margin: 1em 0;
+  }
+
+  .content-wrapper .content .list-club-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  .content-wrapper .content .list-club-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .content-wrapper .content .list-club-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+  }
+
+  .content-wrapper .content .list-club-container .list-club {
+    height: 200px;
+  }
+
+  .dropdown {
+    margin: 1em 0;
+  }
+
+  .dropbtn {
+    width: 100%;
+  }
+
+  .dropdown-content {
+    width: 100%;
+  }
+}
+
+
 
 /*# sourceMappingURL=clubs.css.map */
